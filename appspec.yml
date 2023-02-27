@@ -4,6 +4,6 @@ files:
 - source: /
   destination: /var/www/laravel
   AfterInstall:
-  - location: scripts/Afterinstall.sh
+  - location: scripts/AfterInstall.sh
     timeout: 300
     runas: root
