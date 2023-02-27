@@ -16,4 +16,5 @@ artifacts:
   files:
     - '**/*'
     - 'template-configuration.json'
+    - 'laravel.zip'
     
