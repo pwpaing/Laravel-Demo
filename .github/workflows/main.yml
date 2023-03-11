@@ -41,7 +41,7 @@ jobs:
       uses: php-actions/composer@v6
       with:
         php_version: "7.3"
-        command: composer config --no-plugins allow-plugins.kylekatarnls/update false && composer install --no-plugin --prefer-dist --no-progress
+        args: --no-plugins allow-plugins.kylekatarnls/update false --prefer-dist --no-progress
    
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
