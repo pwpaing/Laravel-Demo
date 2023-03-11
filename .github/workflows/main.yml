@@ -13,11 +13,6 @@ jobs:
   build:
 
     runs-on:  ubuntu-18.04
-     - name: Install dependencies
-     - uses: php-actions/composer@v6
-       with:
-        php_version: "7.3"
-        version: 2.1
 
     steps:
     - uses: actions/checkout@v3
@@ -43,6 +38,10 @@ jobs:
           ${{ runner.os }}-php-
 
     - name: Install dependencies
+      uses: php-actions/composer@v6
+      with:
+        php_version: "7.3"
+        version: 2.1
       run: composer install --prefer-dist --no-progress
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
