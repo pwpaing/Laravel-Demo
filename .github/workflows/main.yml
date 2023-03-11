@@ -36,12 +36,13 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
+    - name: remove the plugin
+      run: composer require allow-plugins.kylekatarnls/update false
 
     - name: Install dependencies
       uses: php-actions/composer@v6
       with:
         php_version: "7.3"
-        command: composer require composer require allow-plugins.kylekatarnls/update false
         args: --no-plugins --prefer-dist --no-progress
    
 
