@@ -42,6 +42,7 @@ jobs:
       with:
         php_version: "7.3"
         version: 2.1
+    - name: composer install
       run: composer install --prefer-dist --no-progress
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
