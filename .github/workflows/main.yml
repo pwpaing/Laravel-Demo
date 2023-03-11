@@ -37,7 +37,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
     - name: remove the plugin
-      run: composer require allow-plugins.kylekatarnls/update false
+      run: composer config allow-plugins.kylekatarnls/update true
 
     - name: Install dependencies
       uses: php-actions/composer@v6
