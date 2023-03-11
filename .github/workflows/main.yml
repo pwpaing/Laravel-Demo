@@ -41,7 +41,7 @@ jobs:
       uses: php-actions/composer@v6
       with:
         php_version: "7.3"
-        version: 2.1
+    
     - name: composer install
       run: composer install --prefer-dist --no-progress
 
